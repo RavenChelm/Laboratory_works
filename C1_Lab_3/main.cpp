@@ -47,24 +47,24 @@ int main()
     char dir[50], name[20];
     char dir2[50], name2[20];
 
-    std::cout << "Ââåäèòå ïóòü äëÿ ñîçäàíèÿ ôàéëà èñõîäíûõ äàííûõ:\n> ";
+    std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¿ÑƒÑ‚ÑŒ Ğ´Ğ»Ñ ÑĞ¾Ğ·Ğ´Ğ°Ğ½Ğ¸Ñ Ñ„Ğ°Ğ¹Ğ»Ğ»Ğ° Ğ¸ÑÑ…Ğ¾Ğ´Ğ½Ñ‹Ñ… Ğ´Ğ°Ğ½Ğ½Ñ‹Ñ…:\n> ";
     std::cin.getline(dir, 50);
-    std::cout << "Ââåäèòå íàçâàíèå è òèï ôàéëà:\n> ";
+    std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ Ğ¸ Ñ‚Ğ¸Ğ¿ Ñ„Ğ°Ğ¹Ğ»Ğ°:\n> ";
     std::cin.getline(name, 20);
     strcat(dir, name);
 
-    std::cout << "Ââåäèòå ïóòü äëÿ ñîçäàíèÿ ôàéëà ãîòîâûõ äàííûõ:\n> ";
+    std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¿ÑƒÑ‚ÑŒ Ğ´Ğ»Ñ ÑĞ¾Ğ·Ğ´Ğ°Ğ½Ğ¸Ñ Ñ„Ğ°Ğ¹Ğ»Ğ° Ğ³Ğ¾Ñ‚Ğ¾Ğ²Ñ‹Ñ… Ğ´Ğ°Ğ½Ğ½Ñ‹Ñ…:\n> ";
     std::cin.getline(dir2, 50);
-    std::cout << "Ââåäèòå íàçâàíèå è òèï ôàéëà:\n> ";
+    std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ Ğ¸ Ñ‚Ğ¸Ğ¿ Ğ´Ğ°Ğ½Ğ½Ñ‹Ñ…:\n> ";
     std::cin.getline(name2, 20);
 	strcat(dir2, name2);
 
     std::ofstream original(dir);
     if (!original.is_open())
-        std::cout << "\n Îøèáêà \n";
+        std::cout << "\n ĞÑˆĞ¸Ğ±ĞºĞ° \n";
     else {
         Group list[size];
-        std::cout << "Çàïîíèòå ïîñòğî÷íî òàáëèöó ãğóïïû:\n\n";
+        std::cout << "Ğ—Ğ°Ğ¿Ğ¾Ğ»Ğ½Ğ¸Ñ‚Ğµ Ğ¿Ğ¾ÑÑ‚Ñ€Ğ¾Ñ‡Ğ½Ğ¾ Ñ‚Ğ°Ğ±Ğ»Ğ¸Ñ†Ñƒ Ğ³Ñ€ÑƒĞ¿Ğ¿Ñ‹:\n\n";
         for (int i = 0; i < size; i++)
             fill_table(i, list);
         for(int i = 0; i < size; i++)
@@ -73,17 +73,17 @@ int main()
 
         system("cls");
 
-        std::cout << "Èñõîäíûå äàííûå:\n";
+        std::cout << "Ğ˜ÑÑ…Ğ¾Ğ´Ğ½Ñ‹Ğµ Ğ´Ğ°Ğ½Ğ½Ñ‹Ğµ:\n";
         std::ifstream originaltoo(dir);
         if (!originaltoo.is_open())
-            std::cout << "\n Îøèáêà \n";
+            std::cout << "\n ĞÑˆĞ¸Ğ±ĞºĞ° \n";
         else {
             Group listcopy[size];
             scan(originaltoo, listcopy, size);
             originaltoo.close();
 
             std::cout << "______________________________________________________________________________________________________________________________________________";
-            std::cout << "\n|ÔÈÎ\t\t|Ïîë\t|Îêîí÷èë\t|Àäğåñ\t|Ñòèïåíäèÿ\t|Äåíü\t|Ìåñÿö\t|Ãîä ğîæäåíèÿ\t|Îöåíêè çà ñåññèş\t|Áàëëû ïğè ïîñòóïëåíèè|\n";
+            std::cout << "\n|Ğ¤Ğ˜Ğ\t\t|ĞŸĞ¾Ğ»\t|ĞĞºĞ¾Ğ½Ñ‡Ğ¸Ğ»\t|ĞĞ´Ñ€ĞµÑ\t|Ğ¡Ñ‚Ğ¸Ğ¿ĞµĞ½Ğ´Ğ¸Ñ\t|Ğ”ĞµĞ½ÑŒ\t|ĞœĞµÑÑÑ†\t|Ğ“Ğ¾Ğ´ Ñ€Ğ¾Ğ¶Ğ´ĞµĞ½Ğ¸Ñ\t|ĞÑ†ĞµĞ½ĞºĞ¸ Ğ·Ğ° ÑĞµÑÑĞ¸Ñ\t|Ğ‘Ğ°Ğ»Ğ»Ñ‹ Ğ¿Ñ€Ğ¸ Ğ¿Ğ¾ÑÑ‚ÑƒĞ¿Ğ»ĞµĞ½Ğ¸Ğ¸|\n";
             std::cout << "______________________________________________________________________________________________________________________________________________";
             std::cout << "\n";
             for (int i = 0; i < size; i++)
@@ -93,7 +93,7 @@ int main()
             
             std::ofstream sorted(dir2);
             if (!sorted.is_open())
-                std::cout << "\n Îøèáêà \n";
+                std::cout << "\n ĞÑˆĞ¸Ğ±ĞºĞ° \n";
             else {
                 for (int i = 0; i < size; i++)
                     if(check[i] == 1)
@@ -104,18 +104,18 @@ int main()
 
                 std::ifstream res(dir2);
                 if (!res.is_open())
-                    std::cout << "\n Îøèáêà \n";
+                    std::cout << "\n ĞÑˆĞ¸Ğ±ĞºĞ° \n";
                 else {
                     scan(res, final, counter);
                     res.close();
-                    std::cout << "\n\Îòîáğàííûå àíêåòíûå äàííûå:\n";
+                    std::cout << "\n\ĞÑ‚Ğ¾Ğ±Ñ€Ğ°Ğ½Ğ½Ñ‹Ğµ Ğ°Ğ½ĞºĞµÑ‚Ğ½Ñ‹Ğµ Ğ´Ğ°Ğ½Ğ½Ñ‹Ğµ:\n";
                     std::cout << "______________________________________________________________________________________________________________________________________________";
-                    std::cout << "\n|ÔÈÎ\t\t|Ïîë\t|Îêîí÷èë\t|Àäğåñ\t|Ñòèïåíäèÿ\t|Äåíü\t|Ìåñÿö\t|Ãîä ğîæäåíèÿ\t|Îöåíêè çà ñåññèş\t|Áàëëû ïğè ïîñòóïëåíèè|\n";
+                    std::cout << "\n|Ğ¤Ğ˜Ğ\t\t|ĞŸĞ¾Ğ»\t|ĞĞºĞ¾Ğ½Ñ‡Ğ¸Ğ»\t|ĞĞ´Ñ€ĞµÑ\t|Ğ¡Ñ‚Ğ¸Ğ¿ĞµĞ½Ğ´Ğ¸Ñ\t|Ğ”ĞµĞ½ÑŒ\t|ĞœĞµÑÑÑ†\t|Ğ“Ğ¾Ğ´ Ñ€Ğ¾Ğ¶Ğ´ĞµĞ½Ğ¸Ñ\t|ĞÑ†ĞµĞ½ĞºĞ¸ Ğ·Ğ° ÑĞµÑÑĞ¸Ñ\t|Ğ‘Ğ°Ğ»Ğ»Ñ‹ Ğ¿Ñ€Ğ¸ Ğ¿Ğ¾ÑÑ‚ÑƒĞ¿Ğ»ĞµĞ½Ğ¸Ğ¸|\n";
                     std::cout << "______________________________________________________________________________________________________________________________________________";
                     std::cout << "\n";
                     for(int i = 0; i < counter; i++)
                         print(final, i);
-                    std::cout << "\n\nÑòóäåíòîâ, óäîâëåòâîğÿşùèõ óñëîâèş: " << counter << "\n";
+                    std::cout << "\n\nnĞ¡Ñ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ¾Ğ², ÑƒĞ´Ğ¾Ğ²Ğ»ĞµÑ‚Ğ²Ğ¾Ñ€ÑÑÑ‰Ğ¸Ñ… ÑƒÑĞ»Ğ¾Ğ²Ğ¸Ñ: " << counter << "\n";
                 }
             }
         }
@@ -126,28 +126,28 @@ int main()
 
 void fill_table(int i, Group* tempStruct)
 {
-    std::cout << "Ô:\n> ";
+    std::cout << "Ğ¤:\n> ";
     std::cin.getline(tempStruct[i].fio.f, 20);
-    std::cout << "ÈÎ:\n> ";
+    std::cout << "Ğ˜Ğ:\n> ";
     std::cin.getline(tempStruct[i].fio.io, 10);
-    std::cout << "Ïîë:\n> ";
+    std::cout << "ĞŸĞ¾Ğ»:\n> ";
     std::cin >> tempStruct[i].gender;
-    std::cout << "Òèï ó÷åáíîãî çàâåäåíèÿ:\n> ";
+    std::cout << "Ğ¢Ğ¸Ğ¿ ÑƒÑ‡ĞµĞ±Ğ½Ğ¾Ğ³Ğ¾ Ğ·Ğ°Ğ²ĞµĞ´ĞµĞ½Ğ¸Ñ:\n> ";
     std::cin >> tempStruct[i].edBase;
-    std::cout << "Àäğåñ:\n> ";
+    std::cout << "ĞĞ´Ñ€ĞµÑÑ:\n> ";
     std::cin >> tempStruct[i].adress;
-    std::cout << "Íàëè÷èå ñòèïåíäèè:\n> ";
+    std::cout << "ĞĞ°Ğ»Ğ¸Ñ‡Ğ¸Ğµ ÑÑ‚Ğ¸Ğ¿ĞµĞ½Ğ´Ğ¸Ğ¸:\n> ";
     std::cin >> tempStruct[i].exMoney;
-    std::cout << "Äåíü ğîæäåíèÿ:\n> ";
+    std::cout << "Ğ”ĞµĞ½ÑŒ Ñ€Ğ¾Ğ¶Ğ´ĞµĞ½Ğ¸Ñ:\n> ";
     std::cin >> tempStruct[i].birth.day;
-    std::cout << "Ìåñÿö ğîæäåíèÿ:\n> ";
+    std::cout << "ĞœĞµÑÑÑ† Ñ€Ğ¾Ğ¶Ğ´ĞµĞ½Ğ¸Ñ:\n> ";
     std::cin >> tempStruct[i].birth.month;
-    std::cout << "Ãîä ğîæäåíèÿ:\n> ";
+    std::cout << "Ğ“Ğ¾Ğ´ Ñ€Ğ¾Ğ¶Ğ´ĞµĞ½Ğ¸Ñ:\n> ";
     std::cin >> tempStruct[i].birth.year;
-    std::cout << "Îöåíêè çà ñåññèş (5 øòóê ÷åğåç ïğîáåë):\n> ";
+    std::cout << "ĞÑ†ĞµĞ½ĞºĞ¸ Ğ·Ğ° ÑĞµÑÑĞ¸Ñ (5 ÑˆÑ‚ÑƒĞº Ñ‡ĞµÑ€ĞµĞ· Ğ¿Ñ€Ğ¾Ğ±ĞµĞ»):\n> ";
     for (int j = 0; j < 5; j++)
         std::cin >> tempStruct[i].marks[j];
-    std::cout << "Áàëëû:\n> ";
+    std::cout << "Ğ‘Ğ°Ğ»Ğ»Ñ‹:\n> ";
     std::cin >> tempStruct[i].points;
     std::cout << "\n";
     std::cin.get();
@@ -223,14 +223,3 @@ int control(Group* list, int size, bool* check)
             check[i] = 0;
     return numberOf;
 }
-
-/*
-Q:\\stydy\\Gr_M023\\temp\\
-list.txt
-Q:\\study\\Gr_M023\\temp\\
-	
-    */
-
-/*
-
-*/
