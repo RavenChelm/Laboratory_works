@@ -1,0 +1,15 @@
+import unittest
+import Lab4
+class TEST_LAB4_VAR_8(unittest.TestCase):
+    def test_1(self):
+        self.assertEqual(Lab4.LAB4_VAR_8("довод"), "Да")
+    def test_2(self):
+        self.assertEqual(Lab4.LAB4_VAR_8("повод"), "Нет")
+    def test_3(self):
+        self.assertEqual(Lab4.LAB4_VAR_8("ДовОд"), "Да")
+    def test_4(self):
+        self.assertEqual(Lab4.LAB4_VAR_8(121), "Да")
+    def test_5(self):
+        self.assertEqual(Lab4.LAB4_VAR_8(1215), "Нет")
+    def test_6(self):
+        self.assertEqual(Lab4.LAB4_VAR_8(True), "Нет")
