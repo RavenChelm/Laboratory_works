@@ -7,7 +7,8 @@ float Deter(float **mas, int m);
 
 int main() {
     int i, j, n, k, d;
-    float **A; //?????? ?
+    
+    float **A; //Массив А
     std::cout<<"Enter the dimension of the matrix: ";
     std::cin>>n; 
     A=new float*[n]; 
@@ -16,24 +17,26 @@ int main() {
         for(j=0;j<n;j++)
             std::cin>>A[i][j];
     }
-    float **B; //?????? B ???? ? ?????
+    
+    float **B; //Массив B
     B=new float*[n]; 
     for (i=0;i<n;i++){ 
         B[i]=new float[n];
         for(j=0;j<n;j++) {
-            if ((i == j) || (i+j) == (n - 1)){ //??????????? ?????????????? ??????????
-                if ((i+j) == (n - 1)) //???????? ?????????
+            if ((i == j) || (i+j) == (n - 1)){ //Определение принадлежности диагонали
+                if ((i+j) == (n - 1)) //побочная диагональ
                     B[i][j] = A[i][j] * 4 / 3;
-                if (i == j) //??????? ?????????
+                if (i == j) //Главная диагональ
                     B[i][j] = A[i][j] / 3;
             }
-            else // ???????? ??? ??????????
+            else // Элементы вне диагоналей
                B[i][j] = pow(A[i][j], 2);
         }
     }
     std::cout<<"Massiv B: \n";
     PrintMatr(B, n);
-    float **C;         //?????? ?
+    
+    float **C;         //Массив C
     C = new float*[n];
      for (i=0;i<n;i++) { 
         C[i]=new float[n];
